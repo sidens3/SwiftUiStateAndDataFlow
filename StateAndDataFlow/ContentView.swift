@@ -22,6 +22,7 @@ struct ContentView: View {
             Spacer()
             ButtonView(timer: timer)
             Spacer()
+            LogOutBotton()
         }
     }
 }
@@ -37,18 +38,18 @@ struct ButtonView: View {
     @ObservedObject var timer: TimeCounter
     
     var body: some View {
-        Button(action: timer.startTimer) {
-            Text(timer.buttonTitle)
-                .font(.title)
-                .fontWeight(.bold)
-                .foregroundColor(.white)
-        }
-        .frame(width: 200, height: 60)
-        .background(Color.red)
-        .cornerRadius(20)
-        .overlay(
-            RoundedRectangle(cornerRadius: 20)
-                .stroke(Color.black, lineWidth: 4)
-        )
+        BorderedButton(title: timer.buttonTitle,
+                       backgroundColor: .red,
+                       action: timer.startTimer)
+    }
+}
+
+struct LogOutBotton: View {
+    @EnvironmentObject private var userManager: UserManager
+    
+    var body: some View {
+        BorderedButton(title: "LogOut",
+                       backgroundColor: .blue,
+                       action: userManager.logOut)
     }
 }
