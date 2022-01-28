@@ -11,6 +11,10 @@ struct RegisterView: View {
     @EnvironmentObject private var userManager: UserManager
     @State private var name = ""
     
+    private var isNameValid: Bool {
+        return name.count <= 2
+    }
+    
     var body: some View {
         VStack {
             ZStack {
@@ -20,7 +24,7 @@ struct RegisterView: View {
                 HStack {
                     Spacer()
                     Text("\(name.count)")
-                        .foregroundColor(name.count <= 2 ? .red : .green)
+                        .foregroundColor(isNameValid ? .red : .green)
                         .padding(.trailing, 30)
                 }
             }
@@ -30,6 +34,7 @@ struct RegisterView: View {
                     Text("OK")
                 }
             }
+            .disabled(isNameValid)
         }
     }
     
