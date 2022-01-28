@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A50018D27A43EF300285CE0 /* BorderedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A50018C27A43EF300285CE0 /* BorderedButton.swift */; };
 		A8571B1327A1BDB40042B3B8 /* StateAndDataFlowApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8571B1227A1BDB40042B3B8 /* StateAndDataFlowApp.swift */; };
 		A8571B1527A1BDB40042B3B8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8571B1427A1BDB40042B3B8 /* ContentView.swift */; };
 		A8571B1727A1BDB50042B3B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8571B1627A1BDB50042B3B8 /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4A50018C27A43EF300285CE0 /* BorderedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedButton.swift; sourceTree = "<group>"; };
 		A8571B0F27A1BDB40042B3B8 /* StateAndDataFlow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StateAndDataFlow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8571B1227A1BDB40042B3B8 /* StateAndDataFlowApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateAndDataFlowApp.swift; sourceTree = "<group>"; };
 		A8571B1427A1BDB40042B3B8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 				A8571B2427A1CA9E0042B3B8 /* UserManager.swift */,
 				A8571B1627A1BDB50042B3B8 /* Assets.xcassets */,
 				A8571B1827A1BDB50042B3B8 /* Preview Content */,
+				4A50018C27A43EF300285CE0 /* BorderedButton.swift */,
 			);
 			path = StateAndDataFlow;
 			sourceTree = "<group>";
@@ -155,6 +158,7 @@
 				A8571B1527A1BDB40042B3B8 /* ContentView.swift in Sources */,
 				A8571B2527A1CA9E0042B3B8 /* UserManager.swift in Sources */,
 				A8571B1327A1BDB40042B3B8 /* StateAndDataFlowApp.swift in Sources */,
+				4A50018D27A43EF300285CE0 /* BorderedButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

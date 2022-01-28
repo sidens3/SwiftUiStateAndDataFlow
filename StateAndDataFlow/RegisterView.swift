@@ -11,16 +11,32 @@ struct RegisterView: View {
     @EnvironmentObject private var userManager: UserManager
     @State private var name = ""
     
+    private var isNameValid: Bool {
+        return name.count <= 2
+    }
+    
     var body: some View {
         VStack {
-            TextField("Enter your name", text: $name)
-                .multilineTextAlignment(.center)
+            ZStack {
+                TextField("Enter your name", text: $name)
+                        .multilineTextAlignment(.center)
+                        .padding(60)
+                HStack {
+                    Spacer()
+                    Text("\(name.count)")
+                        .foregroundColor(isNameValid ? .red : .green)
+                        .padding(.trailing, 30)
+                }
+            }
             Button(action: registerUser) {
                 HStack {
                     Image(systemName: "checkmark.circle")
                     Text("OK")
                 }
             }
+            .disabled(isNameValid)
+        }.onAppear {
+            name = userManager.name
         }
     }
     
