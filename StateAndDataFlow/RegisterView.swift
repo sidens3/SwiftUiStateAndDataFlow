@@ -35,6 +35,8 @@ struct RegisterView: View {
                 }
             }
             .disabled(isNameValid)
+        }.onAppear {
+            name = userManager.name
         }
     }
     
